@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #fdfdfd;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ProductController">
+
+   <children>
+
+      <!-- Header Bar -->
+      <AnchorPane prefHeight="60.0" prefWidth="700.0" style="-fx-background-color: pink;">
+         <children>
+            <Text fill="#f8f9fc" layoutX="14.0" layoutY="41.0" text="Dashboard" wrappingWidth="205.912109375">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="search" layoutX="397.0" layoutY="13.0" prefHeight="35.0" prefWidth="199.0" promptText="Search Product" style="-fx-background-color: white; -fx-background-radius: 8;" />
+            <Button fx:id="searchButton" layoutX="603.0" layoutY="15.0" onAction="#onSearchClick" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: gray;" text="Search" textFill="white" />
+         </children>
+      </AnchorPane>
+
+      <!-- Sidebar -->
+      <Button fx:id="homeBack" layoutX="10.0" layoutY="70.0" onAction="#clickHome" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: pink;" text="Home" />
+      <Button fx:id="supplier" layoutX="10.0" layoutY="110.0" onAction="#onSupplierClick" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: pink;" text="Supplier" />
+      <Button fx:id="category" layoutX="10.0" layoutY="150.0" onAction="#onCategoryClick" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: pink;" text="Category" />
+      <Button fx:id="setting" layoutX="10.0" layoutY="416.0" onAction="#onSettingClick" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: pink;" text="Setting" />
+      <Button fx:id="logout" layoutX="10.0" layoutY="458.0" onAction="#onLogoutClick" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: pink;" text="Logout" />
+
+      <!-- Product Title -->
+      <Text fill="#f28d8d" layoutX="157.0" layoutY="94.0" text="Product List">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+
+      <!-- Product Action Buttons -->
+      <Button fx:id="addProduct" layoutX="157.0" layoutY="110.0" onAction="#onAddProductClick" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: pink;" text="Add Product" />
+      <Button fx:id="editProduct" layoutX="351.0" layoutY="110.0" onAction="#onEditProductClick" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: pink;" text="Edit Product" />
+      <Button fx:id="deleteProduct" layoutX="538.0" layoutY="110.0" onAction="#onDeleteProductClick" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: pink;" text="Delete Product" />
+
+      <!-- Product Table -->
+      <TableView fx:id="productTable" layoutX="160.0" layoutY="150.0" prefHeight="352.0" prefWidth="537.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3;">
+         <columns>
+         <TableColumn fx:id="idColumn" prefWidth="98.0" text="Product ID">
+                        <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="nameColumn" minWidth="7.0" prefWidth="110.0" text="Name">
+                        <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="categoryColumn" prefWidth="112.0" text="Category">
+                        <cellValueFactory><PropertyValueFactory property="category" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="priceColumn" prefWidth="73.0" text="Price">
+                        <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="quantityColumn" prefWidth="127.0" text="Quantity">
+                        <cellValueFactory><PropertyValueFactory property="quantity" /></cellValueFactory>
+                    </TableColumn>
+         </columns>
+      </TableView>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+Someone has opened the file: example.txt
+Someone has opened the file: example.txt
+Someone has opened the file: example.txt
+Someone has opened the file: demo.txt
+Someone has opened the file: example.txt
+[LOG] Someone has opened the file: example.txt
+[LOG] open the file: demo.txt
+[LOG] open the file: demo.txt
+[LOG] open the file: demo.txt
+[LOG] open the file: demo.txt
+open the file: demo.txt
+open the file: demo.txt
+open the file: demo.txt
+open the file: demo.txt

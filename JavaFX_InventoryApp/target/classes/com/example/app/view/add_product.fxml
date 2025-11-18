@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.app.controller.AddProductController">
+    <children>
+        <VBox spacing="10" layoutX="80" layoutY="50">
+            <TextField fx:id="productId" promptText="Product ID"/>
+            <TextField fx:id="productName" promptText="Product Name"/>
+            <TextField fx:id="productCategory" promptText="Category"/>
+            <TextField fx:id="price" promptText="Price"/>
+            <TextField fx:id="quantity" promptText="Quantity"/>
+            <Button text="Add Product" onAction="#handleAddProduct"/>
+        </VBox>
+    </children>
+</AnchorPane>

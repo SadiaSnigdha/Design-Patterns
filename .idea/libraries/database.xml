@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="database">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Observer.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Iterator.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

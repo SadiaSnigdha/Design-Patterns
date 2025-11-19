@@ -1,20 +1,23 @@
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
-public class Caretaker {
-    private Stack<TicTacToe.Memento> history = new Stack<>();
+public class CareTaker {
+    private Deque<Memento> history = new ArrayDeque<>();
 
-    public void save(TicTacToe.Memento m) {
-        history.push(m);
+    public void saveState(Memento memento) {
+        history.push(memento);
     }
 
-    public TicTacToe.Memento undo() {
-        if (!history.isEmpty()) {
-            return history.pop();
+    public Memento undo() {
+        if (history.size() <= 1) {
+            System.out.println("Cannot undo, no previous moves.");
+            return null;
         }
-        return null;
+        history.pop();
+        return history.peek();
     }
 
-    public boolean canUndo() {
-        return !history.isEmpty();
+    public void clear() {
+        history.clear();
     }
 }
